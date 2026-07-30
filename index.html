@@ -76,17 +76,22 @@
     border-radius: 4px;
   }
 
-  /* Layout — 핵심: 왼쪽 details + 오른쪽 content */
+  /* Layout — 제목·메타(details) 아래 내용(content)이 이어지는 세로 1단 배치 */
   .list-container h3 { margin-bottom: 0; }
   .layout {
     margin-top: 1.6rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+  }
+  .layout > div[class*="col-"] {
+    width: 100%;
+    float: none;
   }
   .layout .details {
     display: flex;
     flex-direction: column;
     text-align: left;
+    margin-bottom: 6px;
   }
   .layout .details p {
     margin-bottom: 3px;
@@ -101,17 +106,17 @@
     font-weight: 600;
     font-size: 1.9rem;
   }
+  .layout .details h4 .h4-meta {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #6b7684;
+    letter-spacing: -0.01em;
+    margin-left: 4px;
+  }
   .layout .details .stack {
     font-size: 1.3rem;
     color: #8b95a1;
     margin-top: 8px;
-  }
-  .layout-left { flex-direction: row; }
-  .layout-left .details { margin-bottom: 2rem; }
-  @media screen and (max-width: 767px) {
-    .layout-left { flex-direction: column; }
-    .layout-left .details { text-align: center !important; }
-    .layout-left .details p { text-align: center !important; }
   }
 
   /* Skills table */
@@ -155,6 +160,7 @@
   /* Mermaid diagram boxes — caption 위치(왼쪽 사이드)에 배치 */
   .mermaid-side {
     margin-top: 14px;
+    max-width: 680px;
     background: #fafbfc;
     border: 1px solid #e9ecef;
     border-radius: 6px;
@@ -178,14 +184,19 @@
   .footer-container { margin-top: 40px; padding-bottom: 20px; }
   .footer-container p { text-align: center; font-style: italic; font-weight: 300; font-size: 1.4rem; color: #999; }
 
+  @page { margin: 12mm; }
   @media print {
-    body { font-size: 0.9rem; }
-    .container { margin-top: 12px; }
-    h3 { margin-bottom: 14px; }
-    .layout { margin-top: 1rem; display: block; }
+    /* 전체가 rem 기반이라 html 크기 하나로 인쇄 타이포 전체가 비율 축소된다 (16px 본문 → 약 9.5pt) */
+    html { font-size: 8px; }
+    .container { margin-top: 8px; }
+    h3 { margin-bottom: 10px; padding-bottom: 6px; }
+    .layout { margin-top: 1rem; }
+    .content li { margin: 2px 0; }
+    .content .sub-section { margin-top: 1.4rem; }
+    .project-divider { margin: 14px 0; }
+    .mermaid-side { max-width: 480px; }
     /* mark 배경은 인쇄 시 미출력이 기본이라 글자색을 되돌려야 수치가 보인다 */
     mark { color: #000; background: none; box-shadow: none; font-weight: 600; }
-    .col-print-12 { width: 100% !important; float: none !important; }
     a[href]:after { content: none !important; }
     h3, h4, .mermaid-side { break-inside: avoid; }
   }
@@ -244,10 +255,8 @@
 
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>코매퍼</h4>
-      <p><b>솔루션 개발팀</b></p>
-      <p>2025.06 - 재직 중 <span style="color: #999;">(1년 2개월)</span></p>
-      <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">AI 기반 시설물 안전 점검 솔루션</p>
+      <h4>코매퍼 <span class="h4-meta">솔루션 개발팀 · 2025.06 - 재직 중 (1년 2개월)</span></h4>
+      <p style="font-size: 1.3rem; color: #777; margin-top: 2px;">AI 기반 시설물 안전 점검 솔루션</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
       <p>Kotlin/Spring 멀티모듈 MSA 백오피스에서 결제·구독·콘텐츠 도메인 백엔드를 개발하고, 게이트웨이 공통 기능과 GitOps 기반 운영 인프라를 함께 담당하고 있습니다.</p>
@@ -264,10 +273,8 @@
 
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>아이오유소프트</h4>
-      <p><b>SM전략기획부</b></p>
-      <p>2024.07 - 2025.06 <span style="color: #999;">(1년)</span></p>
-      <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">클라우드 기반 스마트캠퍼스 모바일 플랫폼 전문 기업</p>
+      <h4>아이오유소프트 <span class="h4-meta">SM전략기획부 · 2024.07 - 2025.06 (1년)</span></h4>
+      <p style="font-size: 1.3rem; color: #777; margin-top: 2px;">클라우드 기반 스마트캠퍼스 모바일 플랫폼 전문 기업</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
       <p>대학 전용 모바일 플랫폼의 백엔드를 개발·유지보수하며, 학사 서비스와 백오피스, 플러그인 기능 개발을 수행했습니다.</p>
@@ -283,10 +290,8 @@
 
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>비즈톡</h4>
-      <p><b>Server Developer 팀</b></p>
-      <p>2022.10 - 2024.02 <span style="color: #999;">(1년 5개월)</span></p>
-      <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">카카오 비즈메시지 공식 파트너, 알림톡 시장점유율 1위 기업 메시지 B2B 기업</p>
+      <h4>비즈톡 <span class="h4-meta">Server Developer 팀 · 2022.10 - 2024.02 (1년 5개월)</span></h4>
+      <p style="font-size: 1.3rem; color: #777; margin-top: 2px;">카카오 비즈메시지 공식 파트너, 알림톡 시장점유율 1위 기업 메시지 B2B 기업</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
       <p>기업용 비즈메시지 발송·결과 처리 API 서버를 개발·유지보수하며, 발송 실패 감지 자동화와 발송 결과 통지 방식 개선을 수행했습니다.</p>
