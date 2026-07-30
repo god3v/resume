@@ -17,19 +17,24 @@
   /* ===== modern-resume-theme 기반 ===== */
   body {
     background: #ffffff;
-    color: #333;
+    color: #333d4b;
     font-family: "Wanted Sans Variable", "Wanted Sans", "Noto Sans KR", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 10px;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+    line-height: 1.65;
+    letter-spacing: -0.01em;
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
+  b, strong { font-weight: 600; }
   .container { margin-top: 18px; width: auto; max-width: 920px; }
   .header-container { margin-top: 24px; }
   .header-container h1 { font-weight: 700; }
   .header-container .job-title {
     font-size: 2rem;
     font-weight: 400;
-    color: #888;
+    color: #8b95a1;
+    letter-spacing: -0.01em;
     margin-left: 6px;
   }
   .contact-line {
@@ -40,7 +45,9 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: inherit;
-    line-height: 1.2;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    color: #191f28;
     margin: 0 0 0.75rem;
   }
   h1 { font-size: 4rem; margin-bottom: 0.1rem; font-weight: 500; }
@@ -49,8 +56,8 @@
     font-weight: 700;
     font-size: 2.4rem;
     text-align: left;
-    border-bottom: dashed 2px #CCCCCC;
-    padding-bottom: 8px;
+    border-bottom: 1px solid #e5e8eb;
+    padding-bottom: 10px;
     margin-bottom: 20px;
   }
   h3 small { font-size: 1.6rem; color: #999; }
@@ -61,12 +68,12 @@
   a i { font-size: 1.6rem; }
 
   mark {
-    padding: 2px 4px;
-    font-size: 90%;
-    color: #fff;
-    background-color: #333;
-    border-radius: 3px;
-    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.25);
+    padding: 1px 5px;
+    font-size: 0.95em;
+    font-weight: 600;
+    color: #191f28;
+    background-color: #f2f4f6;
+    border-radius: 4px;
   }
 
   /* Layout — 핵심: 왼쪽 details + 오른쪽 content */
@@ -83,20 +90,20 @@
   }
   .layout .details p {
     margin-bottom: 3px;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     text-align: inherit;
-    font-weight: 300;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
   }
   .layout .details p b { font-weight: 500; }
   .layout .details h4 {
-    margin-bottom: 0.1rem;
-    font-weight: 500;
-    font-size: 2rem;
+    margin-bottom: 0.2rem;
+    font-weight: 600;
+    font-size: 1.9rem;
   }
   .layout .details .stack {
     font-size: 1.3rem;
-    font-style: italic;
-    color: #777;
+    color: #8b95a1;
     margin-top: 8px;
   }
   .layout-left { flex-direction: row; }
@@ -114,32 +121,34 @@
     font-size: 1.4rem;
   }
   .skills-table td {
-    padding: 7px 10px;
-    border-bottom: 1px solid #eee;
+    padding: 8px 10px;
+    border-bottom: 1px solid #f2f4f6;
     text-align: left;
     vertical-align: top;
   }
   .skills-table td:first-child {
     white-space: nowrap;
-    font-weight: 500;
-    color: #555;
+    font-weight: 600;
+    color: #6b7684;
     width: 1%;
     padding-right: 28px;
   }
 
   /* Content side */
   .content ul { padding-left: 20px; }
-  .content ul ul { padding-left: 20px; margin-top: 2px; }
-  .content li { margin: 2px 0; }
+  .content ul ul { padding-left: 20px; margin-top: 3px; }
+  .content li { margin: 4px 0; }
+  .content li > b { color: #191f28; }
   .content p { font-size: 1.6rem; }
 
   /* Project description sub-sections */
   .content .sub-section {
-    font-weight: 500;
-    font-size: 1.7rem;
-    margin-top: 1.5rem;
-    margin-bottom: 0.4rem;
-    color: #222;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.04em;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #8b95a1;
   }
   .content .sub-section:first-child { margin-top: 0; }
 
@@ -158,8 +167,8 @@
   /* Project divider */
   .project-divider {
     border: 0;
-    border-top: 1px dashed #ddd;
-    margin: 20px 0;
+    border-top: 1px dashed #e5e8eb;
+    margin: 26px 0;
   }
 
   /* Borders between items */
@@ -191,8 +200,6 @@
     <a href="mailto:sooon9254@naver.com">sooon9254@naver.com</a>
     <span class="divider">|</span>
     <a href="https://github.com/god3v" target="_blank" rel="noopener noreferrer">github.com/god3v</a>
-    <span class="divider">|</span>
-    <a href="https://ryeojin.tistory.com/" target="_blank" rel="noopener noreferrer">ryeojin.tistory.com</a>
   </p>
 </div>
 
@@ -201,8 +208,7 @@
   <h3>About</h3>
   <div class="row clearfix">
     <div class="col-xs-12 col-print-12">
-      <p><b>안녕하세요, 4년차 백엔드 개발자 고려진입니다.</b></p>
-      <p>기업 메시징의 대량 트래픽 처리에서 시작해 대학 플랫폼 서비스 개발을 거쳐, 지금은 Kotlin/Spring 멀티모듈 MSA에서 <mark>결제·구독 도메인을 요구사항 명세부터 배포·운영까지</mark> 주도하고 있습니다. 이벤트 통신 신뢰성 공통 모듈(9개 모듈 적용), 게이트웨이 공통 기능, GitOps 운영 인프라까지 — 도메인 설계와 운영을 함께 보는 엔지니어로 성장하고 있습니다.</p>
+      <p><b>안녕하세요, 4년차 백엔드 개발자 고려진입니다.</b> 구현에 앞서 문제를 명세로 정리하고, 같은 실패가 반복되지 않도록 구조로 예방하는 개발을 지향합니다. 기준이 없던 곳에 테스트와 문서화의 기준을 세워 팀 표준으로 넓혀온 것처럼, 팀이 더 빠르고 안전하게 개발할 수 있는 기반을 만드는 개발자로 기여하고자 합니다.</p>
     </div>
   </div>
 </div>
@@ -222,7 +228,7 @@
       </tr>
       <tr>
         <td>Infra / Ops</td>
-        <td>AWS (EC2, RDS, S3, ALB, VPC, IAM), ArgoCD, GitHub Actions, Prometheus/Loki/Grafana</td>
+        <td>AWS, ArgoCD, GitHub Actions, Prometheus/Loki/Grafana</td>
       </tr>
       <tr>
         <td>Testing</td>
@@ -239,11 +245,12 @@
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4>코매퍼</h4>
-      <p><b>주임 | 솔루션 개발팀</b></p>
+      <p><b>솔루션 개발팀</b></p>
       <p>2025.06 - 재직 중 <span style="color: #999;">(1년 2개월)</span></p>
       <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">AI 기반 시설물 안전 점검 솔루션</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+      <p>Kotlin/Spring 멀티모듈 MSA 백오피스에서 결제·구독·콘텐츠 도메인 백엔드를 개발하고, 게이트웨이 공통 기능과 GitOps 기반 운영 인프라를 함께 담당하고 있습니다.</p>
       <ul>
         <li><mark>플랜 구독 결제 시스템</mark>을 요구사항 명세·데이터 모델·3채널 API 계약 작성부터 구현·배포까지 주도</li>
         <li>게이트웨이 기반 IP 국가 판정, 단일 세션 필터 등 Spring Cloud Gateway 공통 기능 설계·구현</li>
@@ -258,11 +265,12 @@
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4>아이오유소프트</h4>
-      <p><b>사원 | SM전략기획부</b></p>
+      <p><b>SM전략기획부</b></p>
       <p>2024.07 - 2025.06 <span style="color: #999;">(1년)</span></p>
       <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">클라우드 기반 스마트캠퍼스 모바일 플랫폼 전문 기업</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+      <p>대학 전용 모바일 플랫폼의 백엔드를 개발·유지보수하며, 학사 서비스와 백오피스, 플러그인 기능 개발을 수행했습니다.</p>
       <ul>
         <li>대학 전용 플랫폼 <b>iM Uni'z</b> 신규 개발 및 유지보수</li>
         <li>백오피스 시스템 개발</li>
@@ -276,14 +284,14 @@
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4>비즈톡</h4>
-      <p><b>사원 | Server Developer 팀</b></p>
+      <p><b>Server Developer 팀</b></p>
       <p>2022.10 - 2024.02 <span style="color: #999;">(1년 5개월)</span></p>
       <p style="font-size: 1.3rem; color: #777; margin-top: 8px;">카카오 비즈메시지 공식 파트너, 알림톡 시장점유율 1위 기업 메시지 B2B 기업</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
+      <p>기업용 비즈메시지 발송·결과 처리 API 서버를 개발·유지보수하며, 발송 실패 감지 자동화와 발송 결과 통지 방식 개선을 수행했습니다.</p>
       <ul>
         <li>비즈메시지 발송 실패 감지 및 실시간 알림 시스템 구축 — 수동 감시 프로세스 <mark>약 1시간/일 → 0분</mark></li>
-        <li>고객사 비즈메시지 통계 조회 서비스 1인 개발 (요구사항 분석 → 설계 → 구현)</li>
         <li>Polling 방식이던 발송 결과 확인을 Push(콜백) 방식으로 전환 — API 호출 <mark>30% 감소</mark></li>
       </ul>
     </div>
@@ -294,12 +302,12 @@
 <div class="container list-container">
   <h3>Projects <small>— 코매퍼</small></h3>
 
-  <!-- 1. 플랜 구독 결제 시스템 -->
+  <!-- 1. 결제·구독 도메인 구축 -->
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>플랜 구독 결제 시스템</h4>
-      <p>토큰 단건 판매 서비스에 구독 판매 모델 도입 — 명세부터 배포까지</p>
-      <p class="stack">Kotlin, Spring Boot, JPA/QueryDSL, PostgreSQL, Kotest/MockK</p>
+      <h4>결제·구독 도메인 구축</h4>
+      <p>플랜 구독 결제 시스템 도입과 쿠폰·환불 도메인 구축 — 명세부터 배포까지</p>
+      <p class="stack">Kotlin, Spring Boot, JPA/QueryDSL, PostgreSQL, 포트원(PG)</p>
       <div class="mermaid-side">
         <div class="mermaid">
 flowchart TB
@@ -316,136 +324,58 @@ flowchart TB
       </div>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>토큰 단건 판매만 존재하던 서비스에 구독 판매 모델을 도입. 요구사항 명세, 데이터 모델, 관리자/웹/솔루션 3채널 API 계약을 직접 작성하고 백엔드 구현과 배포까지 수행</p>
+      <p class="sub-section">성과</p>
+      <p>토큰 단건 판매만 있던 서비스에 구독 판매 모델을 <mark>명세부터 배포까지</mark> 완결 도입하고, 쿠폰·환불까지 결제 도메인 전반을 구축</p>
 
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>요구사항 명세·데이터 모델·API 계약 작성부터 백엔드 구현과 배포까지 단독 수행</li>
-      </ul>
+      <p class="sub-section">배경</p>
+      <p>서비스에 구독 판매 모델이 없어 신규 도입이 필요했고, 할인 규칙은 서비스 곳곳에 흩어져 있었으며 PG 환불은 오처리 위험을 안고 있었습니다. 요구사항 명세·데이터 모델·관리자/웹/솔루션 3채널 API 계약 작성부터 구현과 배포까지 단독 수행</p>
 
-      <p class="sub-section">주요 업무</p>
+      <p class="sub-section">액션</p>
       <ul>
-        <li><b>구독–회차–갱신–갱신상품</b> 구조로 데이터 모델을 설계해 회차별 청구 구성과 갱신 이력을 명시적으로 영속화</li>
-        <li>관리자/웹/솔루션 3채널 API 계약 작성 및 구현</li>
-        <li>설계 문서와 구현 코드를 동일 이슈 단위로 커밋 동기화해 스펙-코드 불일치를 방지</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>만료 상태의 구조적 정합성 확보</b>
+        <li><b>구독 도메인 설계</b>
           <ul>
-            <li>만료 상태를 DB에 저장하지 않고 <mark>만료일 기반 도출값</mark>으로 설계해 상태 갱신 누락으로 인한 불일치를 구조적으로 제거</li>
-            <li>해지·연장 등 상태 전이는 도메인 함수로 캡슐화해 규칙 수정 지점을 단일화</li>
+            <li><b>구독–회차–갱신–갱신상품</b> 구조로 데이터 모델을 설계해 회차별 청구 구성과 갱신 이력을 명시적으로 영속화</li>
+            <li>만료 상태를 DB에 저장하지 않고 <mark>만료일 기반 도출값</mark>으로 설계해 상태 갱신 누락으로 인한 불일치를 구조적으로 제거, 해지·연장 등 상태 전이는 도메인 함수로 캡슐화</li>
           </ul>
         </li>
-        <li><b>수동 갱신의 2단계 모델 재설계</b>
+        <li><b>갱신의 2단계 모델 재설계</b>
           <ul>
             <li>즉시 만료일을 연장하던 수동 갱신을 <mark>선결제 등록 + 만료 도래 배치</mark>의 2단계 모델로 재설계해 만료~갱신 사이 서비스 사용 공백을 제거</li>
             <li>배치는 구독별 트랜잭션 격리로 개별 실패의 전파를 막고, 비관적 잠금 후 재확인으로 중복 실행 시 이중 갱신을 방지</li>
           </ul>
         </li>
-        <li><b>청구 정확성과 위조 여지 제거</b>
+        <li><b>청구 정확성과 위조·우회 여지 제거</b>
           <ul>
             <li>QA에서 발견된 일할(proration) 과다 청구를 도메인 계산 기준 수정으로 해결하고 회귀 테스트로 고정</li>
-            <li>체험판 도입으로 부정확해진 주문 타입 역산 분류를 구독 자체 속성 컬럼으로 전환하고, 클라이언트가 지정하던 주문 타입을 서버 고정값으로 바꿔 위조 여지를 제거</li>
+            <li>클라이언트가 지정하던 주문 타입을 서버 고정값으로, 요청 파라미터의 사용자 ID를 JWT 인증 주체 기반으로 전환</li>
           </ul>
         </li>
-        <li><b>조회 최적화</b>
+        <li><b>쿠폰·환불 도메인 구축</b>
           <ul>
+            <li>쿠폰 도메인(관리자/사용자 분리, 엔티티 상속 구조)을 신규 구축하고, 흩어진 할인 규칙(주문/상품 × 정액/정률)을 <mark>전략 패턴으로 단일화</mark></li>
+            <li>PG(포트원) 환불 연동에 환불 정책(수수료 유예 7일·취소 기한 90일)을 도메인 모델로 캡슐화하고, 에러 응답 타입별 매핑과 예상 금액 일치 검증의 <mark>이중 안전장치</mark> 구성</li>
+          </ul>
+        </li>
+        <li><b>구현·최적화</b>
+          <ul>
+            <li>관리자/웹/솔루션 3채널 API 계약 작성·구현, 설계 문서와 구현 코드를 동일 이슈 단위로 커밋 동기화해 스펙-코드 불일치 방지</li>
             <li>상품 목록의 건별 상세 조회(N+1)를 QueryDSL fetch join 단일 쿼리로 전환</li>
           </ul>
         </li>
       </ul>
 
-      <p class="sub-section">기여 성과</p>
+      <p class="sub-section">결과</p>
       <ul>
-        <li>토큰 단건 판매만 있던 서비스에 구독 판매 모델을 <mark>명세부터 배포까지</mark> 완결 도입</li>
         <li>상태 갱신 누락 불일치·이중 갱신·일할 과다 청구 등 정합성 리스크를 구조적으로 제거</li>
-        <li>클라이언트 지정 값을 서버 고정값으로 전환해 주문 타입 위조 여지 제거</li>
+        <li>할인 규칙 변경 지점을 한 곳으로 축소하고, 이중 안전장치로 환불 오처리 방지</li>
+        <li>주문 타입 위조·인증 우회 가능성 제거</li>
       </ul>
     </div>
   </div>
 
   <hr class="project-divider">
 
-  <!-- 2. IP 기반 국가별 콘텐츠 제어 -->
-  <div class="row clearfix layout layout-left border-no">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>IP 기반 국가별 콘텐츠 제어</h4>
-      <p>클라이언트 신뢰 국가 판정을 게이트웨이 서버 권위 판정으로 전환</p>
-      <p class="stack">Spring Cloud Gateway, MaxMind GeoLite2, AWS Global Accelerator, k8s, ArgoCD, Loki</p>
-      <div class="mermaid-side">
-        <div class="mermaid">
-flowchart TB
-    C[클라이언트] --> GA[Global Accelerator<br/>클라이언트 IP 보존]
-    GA --> GW[게이트웨이 GlobalFilter<br/>인입 국가 헤더 제거]
-    GW --> GEO[MaxMind GeoLite2<br/>IP → 국가 판정]
-    GEO -->|검증된 단일 헤더| BE[백엔드 서비스]
-    GEO -.->|판정 불가| US[US 폴백]
-    SC[사이드카 주기 갱신] -.->|mtime 감지<br/>원자 교체| GEO
-    style GW fill:#e3f2fd
-    style GEO fill:#fff3a3
-    style US fill:#ffebee
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>브라우저 locale로 국가를 유추해 가격이 잘못 노출되고, 클라이언트가 보낸 국가 코드를 그대로 신뢰해 위조가 가능하던 문제를 <b>게이트웨이 서버 권위 판정</b> 구조로 해결</p>
-
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>제약 분석과 대안 설계 문서화부터 구현·배포 구성까지 단독 수행</li>
-      </ul>
-
-      <p class="sub-section">주요 업무</p>
-      <ul>
-        <li>게이트웨이 GlobalFilter 기반 국가 판정 필터 설계·구현</li>
-        <li>MaxMind GeoLite2 IP 조회와 GeoIP DB Hot Reload 구현</li>
-        <li>initContainer·사이드카·Loki 알림을 포함한 k8s 배포 구성과 dev→stg→prd 롤아웃</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>서버 권위 판정 구조 설계</b>
-          <ul>
-            <li>게이트웨이 GlobalFilter에서 인입 국가 헤더를 제거하고 검증된 값만 단일 헤더로 전달하도록 설계</li>
-            <li>공유 시크릿은 상수시간 비교로 검증하고, 시크릿 미설정 시 <mark>fail-closed</mark>·판정 불가 시 차단 대신 <mark>US 폴백</mark>을 택해 보안과 가용성을 함께 확보</li>
-          </ul>
-        </li>
-        <li><b>인프라 제약 분석과 대안 설계</b>
-          <ul>
-            <li>운영 도메인이 apex(CNAME 불가)라 CloudFront 국가 헤더를 쓸 수 없는 제약을 배포 전 조사로 규명</li>
-            <li>Global Accelerator가 보존한 클라이언트 IP를 MaxMind GeoLite2로 조회하는 API 방식으로 전환 — 제약 분석과 대안 설계를 문서로 남기고 직접 구현</li>
-          </ul>
-        </li>
-        <li><b>GeoIP DB Hot Reload</b>
-          <ul>
-            <li>주기 갱신되는 GeoIP DB 반영을 위해 파드 재기동 대신 <mark>파일 변경 감지(mtime 폴링) + AtomicReference 원자 교체</mark>의 Hot Reload를 구현</li>
-            <li>DB 로드 실패 시에도 부팅을 막지 않고 기존 리더를 유지해 서비스 연속성 확보</li>
-          </ul>
-        </li>
-        <li><b>배포 파이프라인 정비</b>
-          <ul>
-            <li>initContainer(1회 다운로드) + k8s 네이티브 사이드카(주기 갱신) + Loki 로드 실패 알림 구성을 dev→stg→prd로 롤아웃</li>
-            <li>수동 kubectl로 배포되던 알림 설정을 ArgoCD Application으로 전환해 구성 drift 제거</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="sub-section">기여 성과</p>
-      <ul>
-        <li>브라우저 locale 기반 가격 오노출과 클라이언트 국가 코드 위조 가능성 제거</li>
-        <li>fail-closed·US 폴백 설계로 보안과 가용성을 함께 확보</li>
-        <li>파드 재기동 없는 GeoIP DB 갱신으로 서비스 연속성 확보, ArgoCD 전환으로 구성 drift 제거</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="project-divider">
-
-  <!-- 3. 이벤트 통신 신뢰성 체계 -->
+  <!-- 2. 이벤트 통신 신뢰성 체계 -->
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
       <h4>이벤트 통신 신뢰성 체계</h4>
@@ -468,26 +398,17 @@ flowchart TB
       </div>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>모듈 간 Axon Command·Kafka 이벤트가 실패 시 유실되고 원인 추적이 불가능하던 문제를 해결</p>
+      <p class="sub-section">성과</p>
+      <p>실패 시 유실되던 모듈 간 이벤트를 재시도→영속화→알림 3단계 체계로 전환하고, 공통 모듈로 <mark>9개 전 모듈에 적용</mark></p>
 
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>실패 처리 공통 모듈의 설계·구현과 전 모듈 적용 담당</li>
-      </ul>
+      <p class="sub-section">배경</p>
+      <p>모듈 간 Axon Command·Kafka 이벤트가 실패하면 그대로 유실되고 원인 추적이 불가능했습니다. 실패 처리 공통 모듈의 설계·구현과 전 모듈 적용을 담당</p>
 
-      <p class="sub-section">주요 업무</p>
-      <ul>
-        <li>재시도 → 실패 영속화 → Slack 알림으로 이어지는 3단계 실패 처리 공통 모듈 구현</li>
-        <li>Kafka RetryTopic·Dead Letter Topic 핸들러 구성</li>
-        <li>모듈 간 데이터 결합을 Axon Command 배치 조회로 표준화</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
+      <p class="sub-section">액션</p>
       <ul>
         <li><b>3단계 실패 처리 공통 모듈</b>
           <ul>
-            <li><mark>재시도(1초 간격 3회) → 최종 실패 DB 영속화 → Slack 알림</mark>의 3단계 처리를 공통 모듈로 구현하고, 커스텀 애노테이션 opt-in 방식으로 9개 전 모듈에 적용</li>
+            <li><mark>재시도(1초 간격 3회) → 최종 실패 DB 영속화 → Slack 알림</mark>의 3단계 처리를 공통 모듈로 구현하고, 커스텀 애노테이션 opt-in 방식으로 적용</li>
             <li>재시도 스케줄러는 기존 구현을 감싸는 데코레이터로 설계해 모듈별 코드 변경 최소화</li>
           </ul>
         </li>
@@ -504,10 +425,10 @@ flowchart TB
         </li>
       </ul>
 
-      <p class="sub-section">기여 성과</p>
+      <p class="sub-section">결과</p>
       <ul>
         <li>실패 메시지 유실 방지와 원인 추적 체계 확보</li>
-        <li>커스텀 애노테이션 opt-in·데코레이터 설계로 모듈별 코드 변경을 최소화하며 <mark>9개 전 모듈 적용</mark></li>
+        <li>opt-in·데코레이터 설계로 모듈별 코드 변경을 최소화하며 전 모듈 확산</li>
         <li>실제 장애 시나리오 재현 검증으로 재시도·DLT 동작의 신뢰성 확보</li>
       </ul>
     </div>
@@ -515,101 +436,32 @@ flowchart TB
 
   <hr class="project-divider">
 
-  <!-- 4. 결제 도메인 — 쿠폰·환불 -->
+  <!-- 3. 모니터링·GitOps 인프라 구축 -->
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>결제 도메인 — 쿠폰·환불</h4>
-      <p>쿠폰 도메인 신규 구축과 PG 환불 연동, 테스트 기반 최초 확립</p>
-      <p class="stack">Kotlin, Spring Boot, 포트원(PG), Kotest/MockK/H2</p>
+      <h4>모니터링·GitOps 인프라 구축</h4>
+      <p>클러스터 중앙 관측 체계와 신규 모듈 CI/CD·배포 인프라를 GitOps로 구축</p>
+      <p class="stack">Prometheus/Loki/Promtail, Helm, GitHub Actions, ArgoCD, AWS EKS</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>결제 도메인에 쿠폰 할인과 PG 환불 정책을 도입하면서, 흩어진 할인 규칙과 환불 오처리 위험, 테스트 부재 문제를 함께 해결</p>
+      <p class="sub-section">성과</p>
+      <p>클러스터 중앙 관측 체계와 신규 모듈 4종의 CI/CD·무중단 배포 인프라를 <mark>GitOps 기반으로 구축</mark></p>
 
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>쿠폰·환불 도메인 설계·구현과 payment 모듈 테스트 기반 구축 담당</li>
-      </ul>
+      <p class="sub-section">배경</p>
+      <p>클러스터 상태를 중앙에서 관측·통보하는 체계가 없었고, 알림 설정은 수동 kubectl 배포로 관리되어 구성 drift가 발생했습니다. 모니터링 스택과 신규 모듈 배포 인프라 구성을 담당</p>
 
-      <p class="sub-section">주요 업무</p>
+      <p class="sub-section">액션</p>
       <ul>
-        <li>쿠폰 도메인(관리자/사용자 분리, 엔티티 상속 구조) 신규 구축과 주문 결제 금액 계산 통합</li>
-        <li>PG(포트원) 환불 연동과 환불 정책 도메인 모델링</li>
-        <li>Kotest+MockK+H2 기반 계층별 테스트와 공용 픽스처 패턴 구축</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>쿠폰 도메인 구축과 할인 규칙 단일화</b>
+        <li><b>중앙 모니터링·알림 체계</b>
           <ul>
-            <li>쿠폰 도메인(관리자/사용자 분리, 엔티티 상속 구조)을 신규 구축하고 주문 결제 금액 계산과 통합</li>
-            <li>서비스와 모델에 흩어진 할인 규칙(주문/상품 × 정액/정률)을 <mark>전략 패턴으로 단일화</mark>해 규칙 변경 지점을 한 곳으로 축소</li>
+            <li>Prometheus·Loki·Promtail 모니터링 스택을 Helm 환경별 values 구조로 구축 (노드 자원 알림 룰 + Slack 통보)</li>
           </ul>
         </li>
-        <li><b>PG 환불 연동의 이중 안전장치</b>
+        <li><b>CI/CD·GitOps 전환</b>
           <ul>
-            <li>PG(포트원) 환불 연동에 환불 수수료 유예 7일·취소 기한 90일 정책을 도메인 모델로 캡슐화</li>
-            <li>PG 에러 응답 타입별 매핑과 예상 금액 일치 검증의 <mark>이중 안전장치</mark>로 환불 오처리를 방지</li>
-          </ul>
-        </li>
-        <li><b>테스트 기반 최초 구축</b>
-          <ul>
-            <li>테스트가 전무하던 payment 모듈에 Kotest+MockK+H2 기반 계층별 테스트와 공용 픽스처 패턴을 최초 구축 — 이후 신규 모듈 테스트의 표준으로 확산</li>
-          </ul>
-        </li>
-        <li><b>인증 우회 가능성 제거</b>
-          <ul>
-            <li>요청 파라미터의 사용자 ID를 신뢰하던 API를 JWT 인증 주체 기반으로 전환</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="sub-section">기여 성과</p>
-      <ul>
-        <li>흩어져 있던 할인 규칙의 변경 지점을 전략 패턴으로 한 곳으로 축소</li>
-        <li>에러 매핑·금액 검증 이중 안전장치로 환불 오처리 방지</li>
-        <li>테스트가 전무하던 모듈에 구축한 테스트 패턴이 <mark>신규 모듈 테스트의 표준</mark>으로 확산</li>
-        <li>요청 파라미터 신뢰 API를 JWT 인증 주체 기반으로 전환해 인증 우회 가능성 제거</li>
-      </ul>
-    </div>
-  </div>
-
-  <hr class="project-divider">
-
-  <!-- 5. API Gateway · 운영 인프라 -->
-  <div class="row clearfix layout layout-left border-no">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>API Gateway · 운영 인프라</h4>
-      <p>게이트웨이 공통 필터와 모니터링·배포 인프라 구축</p>
-      <p class="stack">Spring Cloud Gateway, Redis, Prometheus/Loki/Promtail, Helm, GitHub Actions, ArgoCD</p>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>게이트웨이 계층의 세션·재시도·에러 처리 공통화와 모니터링·CI/CD 운영 인프라를 구축</p>
-
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>게이트웨이 공통 필터 구현과 모니터링·배포 인프라 구성 담당</li>
-      </ul>
-
-      <p class="sub-section">주요 업무</p>
-      <ul>
-        <li>단일 세션 필터, 재시도 필터, 전역 에러 핸들러 등 게이트웨이 공통 기능 구현</li>
-        <li>Prometheus·Loki·Promtail 모니터링 스택을 Helm 환경별 values 구조로 구축 (노드 자원 알림 룰 + Slack 통보)</li>
-        <li>신규 모듈 4종의 GitHub Actions CI/CD와 ArgoCD 매니페스트 작성</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>단일 세션 필터</b>
-          <ul>
-            <li>활성 시트 사용자의 다중 디바이스 동시 사용을 게이트웨이 단일 세션 필터로 차단 — Redis 저장 토큰과 매 요청 비교하되, <mark>키 부재 시 통과</mark>시키는 설계로 레거시 사용자 하위 호환을 별도 마이그레이션 없이 확보</li>
-          </ul>
-        </li>
-        <li><b>재시도·에러 처리 정비</b>
-          <ul>
-            <li>5xx 전체에 걸리던 재시도 필터를 서비스 미가용(503)으로 한정해 <mark>비멱등 요청의 중복 처리 위험을 제거</mark></li>
-            <li>다운스트림 장애 시 표준 JSON 에러 응답으로 변환하는 전역 핸들러 구현</li>
+            <li>신규 모듈 4종의 GitHub Actions CI/CD와 k8s 매니페스트(무중단 배포 표준) 작성</li>
+            <li>수동 kubectl로 배포되던 Loki 알림 룰을 ArgoCD Application(prune+selfHeal)으로 전환</li>
+            <li>ArgoCD StatefulSet 영구 OutOfSync 문제를 client-side diff의 한계(defaulted immutable 필드)로 규명하고 <mark>ServerSideDiff 적용</mark>으로 해결</li>
           </ul>
         </li>
         <li><b>dev 클러스터 노드 OOM 인시던트 대응</b>
@@ -619,177 +471,73 @@ flowchart TB
         </li>
       </ul>
 
-      <p class="sub-section">기여 성과</p>
+      <p class="sub-section">결과</p>
       <ul>
-        <li>다중 디바이스 동시 사용 차단을 별도 마이그레이션 없이 레거시 하위 호환으로 적용</li>
-        <li>재시도 범위 한정으로 비멱등 요청의 중복 처리 위험 제거</li>
-        <li>모니터링·알림·CI/CD 체계 구축으로 신규 모듈 운영 기반 확보</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-<!-- ===== 비즈톡 프로젝트 상세 ===== -->
-<div class="container list-container">
-  <h3>Projects <small>— 비즈톡</small></h3>
-
-  <!-- 6. 비즈메시지 발송 실패 감지 -->
-  <div class="row clearfix layout layout-left border-no">
-    <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>발송 실패 감지·실시간 알림</h4>
-      <p>수동 모니터링을 자동 장애 전파 체계로 전환</p>
-      <p class="stack">Java, Spring, Redis, Kafka</p>
-      <div class="mermaid-side">
-        <div class="mermaid">
-flowchart TB
-    S[발송 서버] -->|실패 유형별 집계| RC[Redis INCR + TTL<br/>1분 단위 카운팅]
-    RC -->|500건 초과| K[Kafka 장애 알림 토픽]
-    K --> L[Spring Kafka Listener<br/>비동기 Consume]
-    L --> N[SMS · 알림톡 · Slack<br/>운영팀 실시간 전파]
-    style RC fill:#fff3a3
-    style K fill:#e3f2fd
-    style N fill:#ffebee
-        </div>
-      </div>
-    </div>
-    <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>서버 장애, 발송 업체 장애, 고객사 요청 전문 오류 등으로 발송 실패가 급증해도 운영팀이 수동 모니터링으로만 인지하던 한계를, 특정 에러 유형이 1분 내 500건 이상 발생하면 사내 알림 채널로 실시간 전파하는 시스템으로 해결</p>
-
-      <p class="sub-section">팀 구성 및 역할</p>
-      <ul>
-        <li>실패 감지 로직부터 알림 파이프라인까지 시스템 설계·구현 담당</li>
-      </ul>
-
-      <p class="sub-section">주요 업무</p>
-      <ul>
-        <li>실패 유형별 임계 기반 장애 감지 로직 구현</li>
-        <li>Kafka 기반 실시간 알림 파이프라인 구축 — SMS·알림톡·Slack(Webhook API)으로 운영팀에 전파</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>Threshold 기반 실패 집계</b>
-          <ul>
-            <li>Redis INCR + TTL 기반 카운팅으로 1분 단위 동일 실패 유형 집계, 500건 초과 시 Kafka 토픽에 장애 알림 발행</li>
-          </ul>
-        </li>
-        <li><b>비동기 알림 처리</b>
-          <ul>
-            <li>Spring Kafka Listener 기반 비동기 Consume — 실패 유형, 에러 코드, 발생 건수 등 메타데이터를 포함해 운영팀이 빠르게 원인을 파악하도록 구성</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="sub-section">기여 성과</p>
-      <ul>
-        <li>발송 실패 감지·알림 <mark>자동화율 100%</mark> — 기존 수동 감시 프로세스 <mark>약 1시간/일 → 0분</mark></li>
-        <li>실패 건수가 많았던 업체별 정책적 거부 사유를 분석해 발송 정책 최적화, 실패 유형별 사전 필터링 로직 추가로 발송 실패율 감소에 기여</li>
+        <li>노드 자원 이상을 사전 감지·통보하는 중앙 관측 체계 확보</li>
+        <li>신규 모듈의 CI/CD·무중단 배포 운영 기반 확보</li>
+        <li>수동 배포 제거와 ServerSideDiff 적용으로 구성 drift 차단</li>
       </ul>
     </div>
   </div>
 
   <hr class="project-divider">
 
-  <!-- 7. 고객사 통계 조회 서비스 -->
+  <!-- 4. 테스트 체계 구축 -->
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>고객사 통계 조회 서비스</h4>
-      <p>수작업 정산 데이터 전달을 자동화된 조회 시스템으로 전환</p>
-      <p class="stack">Java, Spring, Spring Scheduler, Spring Security, DataTables.js</p>
+      <h4>테스트 체계 구축·표준화</h4>
+      <p>테스트가 전무하던 결제 모듈에 테스트 기반을 최초 구축하고 팀 표준으로 확산</p>
+      <p class="stack">Kotest(DescribeSpec), MockK, H2, JUnit 5</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>월별 정산을 위해 개발팀이 일자별 로그 테이블을 수동 조회하고 엑셀로 병합해 고객사에 전달하던 방식을, 고객사가 직접 월별/일별 발송 건수·실패 내역을 조회하는 자동화 시스템으로 전환</p>
+      <p class="sub-section">성과</p>
+      <p>테스트가 전무하던 payment 모듈에 계층별 테스트 기반을 최초 구축 — <mark>신규 모듈 테스트의 표준</mark>으로 확산</p>
 
-      <p class="sub-section">팀 구성 및 역할</p>
+      <p class="sub-section">배경</p>
+      <p>결제 모듈에 테스트가 전혀 없어 변경을 안전하게 검증할 수단이 없었고, 결함이 반복될 위험이 있었습니다</p>
+
+      <p class="sub-section">액션</p>
       <ul>
-        <li><mark>1인 프로젝트</mark>로 요구사항 분석부터 설계, 구현까지 전 과정 담당</li>
+        <li>Kotest(DescribeSpec)+MockK+H2 기반 계층별 테스트와 <mark>공용 픽스처 패턴</mark> 최초 구축</li>
+        <li>구독 결제 시스템을 서비스·도메인 테스트 동반 개발(TDD)로 구현</li>
+        <li>QA에서 발견된 결함(일할 과다 청구 등)을 회귀 테스트로 고정하는 관행 정착</li>
       </ul>
 
-      <p class="sub-section">주요 업무</p>
+      <p class="sub-section">결과</p>
       <ul>
-        <li>월별/일별 발송 건수·실패 내역 통계 집계 및 조회 시스템 구축</li>
-        <li>DataTables.js 기반 대시보드 구축 — 발송 내역 시각화·엑셀 다운로드 제공</li>
-        <li>Spring Security 활용 인증 시스템 구축</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>온프레미스 단일 서버 제약 대응</b>
-          <ul>
-            <li>고객사의 온프레미스 단일 서버 환경을 고려해 Spring Scheduler로 정기적으로 프로시저를 호출, 최근 30일 발송 내역 통계를 JSON 파일로 저장</li>
-            <li>분단위 페이지 리로드로 준실시간 데이터 조회 제공</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="sub-section">기여 성과</p>
-      <ul>
-        <li>고객사가 준실시간(분 단위 갱신)으로 발송 통계를 직접 조회하게 되어 운영팀 부담 감소</li>
-        <li>수작업 오류를 최소화해 통계 데이터의 정확성 보장</li>
+        <li>구축한 테스트 패턴이 신규 모듈 테스트의 표준으로 확산</li>
+        <li>회귀 테스트 고정으로 반복 결함의 재발 차단</li>
       </ul>
     </div>
   </div>
 
   <hr class="project-divider">
 
-  <!-- 8. 발송 결과 Push 서비스 -->
+  <!-- 5. AI 기반 SDD 개발 체계 구축 -->
   <div class="row clearfix layout layout-left border-no">
     <div class="col-xs-12 col-sm-4 col-md-3 col-print-12 details">
-      <h4>발송 결과 Push 서비스</h4>
-      <p>Polling 방식의 결과 확인을 콜백 기반 Push로 전환</p>
-      <p class="stack">Java, Spring WebFlux, Kafka, Redis</p>
-      <div class="mermaid-side">
-        <div class="mermaid">
-flowchart TB
-    K[Kafka<br/>발송 결과 수신] --> P[WebFlux Push 서버]
-    P -->|콜백 URL 조회| R[(Redis)]
-    P -->|WebClient 비동기 요청| C[고객사 콜백 엔드포인트]
-    P -. 실패 .-> RT[Exponential Backoff<br/>재시도]
-    RT -. 최종 실패 .-> DLQ[DLQ<br/>Polling 폴백 제공]
-    style P fill:#e3f2fd
-    style RT fill:#fff3a3
-    style DLQ fill:#ffebee
-        </div>
-      </div>
+      <h4>AI 기반 SDD 개발 체계 구축</h4>
+      <p>명세→계획→TDD 구현→리뷰 사이클을 AI 스킬로 정형화해 팀 표준화</p>
+      <p class="stack">Claude Code(스킬·가이드), Jira MCP, Markdown</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-9 col-print-12 content">
-      <p class="sub-section">프로젝트 개요</p>
-      <p>고객사가 발송 결과 확인을 위해 API를 주기적으로 호출(Polling)하던 방식이 실시간성이 떨어지고 불필요한 트래픽을 유발해, Push 방식의 콜백 기반 발송 결과 통지 시스템을 설계·구현</p>
+      <p class="sub-section">성과</p>
+      <p>AI 협업 개발을 <mark>팀 표준 프로세스</mark>로 문서화 — SDD(명세 주도 개발)→계획→TDD 구현→리뷰 사이클을 AI 스킬로 정형화</p>
 
-      <p class="sub-section">팀 구성 및 역할</p>
+      <p class="sub-section">배경</p>
+      <p>AI 협업이 개인별로 제각각 이루어져 산출물의 품질 편차가 컸고, 명세·리뷰 기준이 정형화되어 있지 않았습니다</p>
+
+      <p class="sub-section">액션</p>
       <ul>
-        <li>Push 방식 콜백 통지 시스템의 설계·구현 담당</li>
+        <li>프로젝트 개발 가이드(647줄)·Entity 생성 가이드(564줄)·리뷰 체크리스트(18개 카테고리) 작성</li>
+        <li><mark>SDD+TDD 스킬 파이프라인</mark> 구축과 Jira 연동 커밋 워크플로우 정착</li>
+        <li>문서 리뷰 프로세스(요구사항: 기획 작성·개발 리뷰 / 명세·API 계약: 개발 작성·기획 승인)를 PR 템플릿 규칙으로 확립</li>
       </ul>
 
-      <p class="sub-section">주요 업무</p>
+      <p class="sub-section">결과</p>
       <ul>
-        <li>Kafka 기반 발송 결과 수신 및 처리</li>
-        <li>WebFlux 기반 비동기 Push 시스템 구축</li>
-        <li>발송 실패 대응 및 장애 감지 체계 구축</li>
-      </ul>
-
-      <p class="sub-section">문제 해결 과정</p>
-      <ul>
-        <li><b>비동기 Push 처리</b>
-          <ul>
-            <li>Redis에 저장된 고객사 콜백 URL을 조회해 WebClient로 비동기 HTTP 요청 전송</li>
-            <li>논블로킹 I/O 기반 처리로 콜백 전송 대기가 스레드를 점유하지 않아 대량 발송 시에도 처리량 유지</li>
-          </ul>
-        </li>
-        <li><b>실패 대응·폴백 설계</b>
-          <ul>
-            <li>Exponential Backoff 방식의 재시도 로직 적용</li>
-            <li>최종 실패 시 DLQ로 전송해 기존 Polling 방식으로 결과를 가져갈 수 있도록 폴백 구성</li>
-          </ul>
-        </li>
-      </ul>
-
-      <p class="sub-section">기여 성과</p>
-      <ul>
-        <li>Push 전환으로 불필요한 Polling 트래픽 절감 — <mark>API 호출 횟수 30% 감소</mark></li>
-        <li>비동기 처리·재시도 로직으로 <mark>Push 처리 성공률 99%</mark> 유지 (실패율 1% 미만)</li>
+        <li>개발 사이클 정형화로 AI 협업 산출물의 품질 편차 축소</li>
+        <li>가이드·체크리스트·스킬 파이프라인이 팀 표준 프로세스로 정착</li>
       </ul>
     </div>
   </div>
